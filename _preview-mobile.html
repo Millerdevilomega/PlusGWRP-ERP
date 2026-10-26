@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><title>QA móvil 2</title>
+<style>
+  body{margin:0;background:#1e293b;display:flex;gap:16px;padding:16px;font-family:sans-serif;align-items:flex-start}
+  figure{margin:0}
+  figcaption{color:#94a3b8;font-size:12px;padding:6px 0}
+  iframe{border:0;background:#080b10;box-shadow:0 10px 40px #000}
+</style></head>
+<body>
+  <figure><figcaption>Mockup · 390</figcaption><iframe data-device="1" src="index.html?v=5" width="390" height="940"></iframe></figure>
+  <figure><figcaption>Modal · 390</figcaption><iframe data-modal="1" src="index.html?v=5" width="390" height="940"></iframe></figure>
+  <figure><figcaption>Cierre · 390</figcaption><iframe data-target="contacto" src="index.html?v=5" width="390" height="940"></iframe></figure>
+  <script>
+    window.addEventListener('load', function () {
+      setTimeout(function () {
+        document.querySelectorAll('iframe').forEach(function (frame) {
+          var win = frame.contentWindow, doc = frame.contentDocument;
+          doc.documentElement.style.scrollBehavior = 'auto';
+          if (frame.dataset.device) {
+            var stage = doc.querySelector('.device-stage');
+            if (stage) win.scrollTo(0, stage.offsetTop - 80);
+          }
+          if (frame.dataset.modal) {
+            var opener = doc.querySelector('[data-open-demo]');
+            if (opener) opener.click();
+          }
+          if (frame.dataset.target) {
+            var el = doc.getElementById(frame.dataset.target);
+            if (el) win.scrollTo(0, el.offsetTop - 68);
+          }
+        });
+      }, 700);
+    });
+  </script>
+</body>
+</html>

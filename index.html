@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PlusG WMS-ERP | El fin de las mermas invisibles</title>
+  <meta name="description" content="PlusG WMS-ERP integra control físico de almacén, auditoría financiera 3-Way Match y validación fiscal CFDI 4.0 en una sola plataforma de grado industrial.">
+  <meta name="theme-color" content="#06090e">
+  <meta property="og:title" content="PlusG WMS-ERP | El fin de las mermas invisibles">
+  <meta property="og:description" content="Control físico, auditoría financiera y facturación SAT en una sola plataforma industrial.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="alternate icon" href="logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</head>
+<body class="theme-dark">
+
+  <a class="skip" href="#main">Saltar al contenido principal</a>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="PlusG WMS-ERP, inicio">
+        <img class="brand-mark" src="assets/logo.png" onerror="this.onerror=null;this.src='logo.png';" alt="PlusG WMS-ERP" width="38" height="38">
+        <div class="brand-text">
+          <span class="brand-name">Plus<span>G</span></span>
+          <span class="brand-badge mono"><span class="pulse-dot"></span> V1.0 ENTERPRISE</span>
+        </div>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Navegación principal">
+        <a href="#diagnostico">Diagnóstico</a>
+        <a href="#bento">Diferenciadores</a>
+        <a href="#calculadora">Calculadora ROI</a>
+        <a href="#modulos">Módulos A–H</a>
+        <a href="#roles">Roles RBAC</a>
+        <a href="#faq">Preguntas</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#calculadora" class="btn btn-ghost btn-sm nav-calc-btn">Simular ROI</a>
+        <button class="btn btn-accent btn-sm header-cta" type="button" data-open-demo>Agendar Demo</button>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú de navegación">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ================= 01 HERO ================= -->
+    <section class="hero" id="top">
+      <div class="hero-ambient-glow" aria-hidden="true"></div>
+      <div class="hero-grid-pattern" aria-hidden="true"></div>
+
+      <div class="container hero-container">
+        <div class="hero-content reveal">
+          <div class="hero-eyebrow">
+            <span class="badge-tag mono"><span class="pulse-dot"></span> WMS + ERP INDUSTRIAL</span>
+            <span class="hero-telemetry mono">AUDITORÍA SAT · LATENCIA &lt; 10ms</span>
+          </div>
+
+          <h1 class="hero-title">
+            El fin de las <span class="text-gradient">mermas invisibles.</span><br>
+            Del andén al balance fiscal.
+          </h1>
+
+          <p class="hero-lead">
+            PlusG unifica el <strong>control físico de almacén</strong> con la <strong>auditoría financiera y fiscal CFDI 4.0</strong> en una sola plataforma. Diseñado para resistir cámaras frías sin red, andenes congestionados y el rigor implacable de comités directivos.
+          </p>
+
+          <div class="hero-actions">
+            <button class="btn btn-accent btn-lg" type="button" data-open-demo>
+              <span>Agendar demostración de 15 min</span>
+              <svg class="btn-arrow" viewBox="0 0 20 20" fill="currentColor" width="18" height="18" aria-hidden="true">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </button>
+            <a href="#calculadora" class="btn btn-line btn-lg">
+              <span>Calcular fuga de dinero</span>
+            </a>
+          </div>
+
+          <div class="hero-guarantees">
+            <div class="guarantee-item">
+              <span class="check-icon">✓</span>
+              <span>Sin costo ni compromiso</span>
+            </div>
+            <div class="guarantee-item">
+              <span class="check-icon">✓</span>
+              <span>Reconciliación 3-Way Match</span>
+            </div>
+            <div class="guarantee-item">
+              <span class="check-icon">✓</span>
+              <span>Arquitectura Offline-First</span>
+            </div>
+          </div>
+
+          <div class="hero-standards" aria-label="Estándares de cumplimiento">
+            <span class="standard-pill">CFDI 4.0 SAT</span>
+            <span class="standard-pill">NOM-251 INOCUIDAD</span>
+            <span class="standard-pill">APICS / SCOR</span>
+            <span class="standard-pill">ZEBRA / HONEYWELL SDK</span>
+          </div>
+        </div>
+
+        <!-- HERO INTERACTIVE MISSION CONTROL CENTER -->
+        <div class="hero-showcase reveal" id="hero-showcase">
+          <div class="showcase-frame">
+            <!-- Frame Top Bar -->
+            <div class="showcase-topbar">
+              <div class="window-controls" aria-hidden="true">
+                <span class="wc-dot red"></span>
+                <span class="wc-dot yellow"></span>
+                <span class="wc-dot green"></span>
+              </div>
+              <div class="showcase-tabs" role="tablist" aria-label="Vistas interactivas de demostración">
+                <button class="showcase-tab active" role="tab" aria-selected="true" data-tab="tab-anden">
+                  <span class="tab-indicator"></span> 01 Andén en Vivo
+                </button>
+                <button class="showcase-tab" role="tab" aria-selected="false" data-tab="tab-3way">
+                  <span class="tab-indicator"></span> 02 Conciliación 3-Way Match
+                </button>
+                <button class="showcase-tab" role="tab" aria-selected="false" data-tab="tab-racks">
+                  <span class="tab-indicator"></span> 03 Racks 3D &amp; FEFO
+                </button>
+                <button class="showcase-tab" role="tab" aria-selected="false" data-tab="tab-flota">
+                  <span class="tab-indicator"></span> 04 Despacho &amp; POD
+                </button>
+              </div>
+              <div class="telemetry-chip mono">
+                <span class="live-dot"></span> LIVE
+              </div>
+            </div>
+
+            <!-- Console Content Screen -->
+            <div class="showcase-body">
+              <!-- KPI Ribbon -->
+              <div class="console-ribbon">
+                <div class="ribbon-kpi">
+                  <span class="kpi-label mono">EXACTITUD ERI</span>
+                  <span class="kpi-val text-emerald">99.98%</span>
+                </div>
+                <div class="ribbon-kpi">
+                  <span class="kpi-label mono">DISCREPANCIAS HOY</span>
+                  <span class="kpi-val text-cyan">$0.00 MXN</span>
+                </div>
+                <div class="ribbon-kpi">
+                  <span class="kpi-label mono">ANDENES ACTIVOS</span>
+                  <span class="kpi-val">04 / 04</span>
+                </div>
+                <div class="ribbon-kpi">
+                  <span class="kpi-label mono">SINCRONIZACIÓN</span>
+                  <span class="kpi-val text-emerald">0 PENDIENTES</span>
+                </div>
+              </div>
+
+              <!-- DYNAMIC PANELS -->
+              <!-- Panel 1: Andén -->
+              <div class="console-panel active" id="tab-anden" role="tabpanel">
+                <div class="dock-layout">
+                  <div class="dock-list">
+                    <div class="dock-card matched">
+                      <div class="dock-header">
+                        <span class="dock-title mono">ANDÉN 01 · CEDIS NORTE</span>
+                        <span class="badge-status ok">RECIBIENDO</span>
+                      </div>
+                      <div class="dock-meta">
+                        <span>Prov: <strong>Lácteos del Bajío S.A.</strong></span>
+                        <span>OC: <strong>#OC-8941</strong> · Factura: <strong>FX-44910</strong></span>
+                      </div>
+                      <div class="progress-bar-wrap">
+                        <div class="progress-bar" style="width: 82%;"></div>
+                      </div>
+                      <div class="dock-stats mono">
+                        <span>82 / 100 Tarimas validadas</span>
+                        <span class="text-emerald">100% FEFO OK</span>
+                      </div>
+                    </div>
+
+                    <div class="dock-card">
+                      <div class="dock-header">
+                        <span class="dock-title mono">ANDÉN 02 · EMBARQUE RUTA 04</span>
+                        <span class="badge-status ok">SURTIDO COMPLETO</span>
+                      </div>
+                      <div class="dock-meta">
+                        <span>Destino: <strong>Sucursales Zona Metropolitana</strong></span>
+                        <span>Chofer: <strong>R. Mendoza (Unidad 14)</strong></span>
+                      </div>
+                      <div class="dock-stats mono">
+                        <span>480 Bultos · Anti-aplastamiento</span>
+                        <span class="text-cyan">Sello: #SL-9932</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Integrated Rugged Handheld Screen -->
+                  <div class="rugged-device" aria-label="Colectora industrial en andén">
+                    <div class="device-glow"></div>
+                    <div class="device-body">
+                      <div class="device-bezel-top">
+                        <span class="device-sensor"></span>
+                        <span class="device-brand-name mono">PLUSG HANDHELD</span>
+                        <span class="device-bunker-pill mono" id="device-net-status">BÚNKER OFFLINE</span>
+                      </div>
+                      <div class="device-inner-screen">
+                        <div class="device-header-row">
+                          <span class="mono">RUTA 04</span>
+                          <span class="mono text-cyan">LOC: A-12-B</span>
+                        </div>
+                        <div class="device-scan-hud">
+                          <div class="laser-scanner"></div>
+                          <span class="corner-bracket top-l"></span>
+                          <span class="corner-bracket top-r"></span>
+                          <span class="corner-bracket bot-l"></span>
+                          <span class="corner-bracket bot-r"></span>
+                          <div class="scan-barcode">
+                            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                          </div>
+                          <span class="scan-prompt mono">ESCANEANDO LPN / LOTE</span>
+                        </div>
+                        <div class="device-data-card">
+                          <div class="data-row"><span>Producto:</span> <b>Suero Glucosa 500ml</b></div>
+                          <div class="data-row"><span>Lote FEFO:</span> <b class="text-emerald">L-2291 (CAD: 2028-04)</b></div>
+                          <div class="data-row"><span>Cant:</span> <b>24 pzas / Master Box</b></div>
+                        </div>
+                        <div class="device-action-btn mono">CONFIRMAR PICK [ENTER]</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Panel 2: 3-Way Match -->
+              <div class="console-panel" id="tab-3way" role="tabpanel">
+                <div class="match-interactive-board">
+                  <div class="match-columns">
+                    <div class="match-col">
+                      <div class="col-head mono"><span class="icon-tag">1</span> ORDEN DE COMPRA</div>
+                      <div class="doc-card">
+                        <span class="doc-id mono">OC-8941 (AUTORIZADA)</span>
+                        <div class="doc-line"><span>SKU-4401: Harina Esp.</span><b>500 sacos</b></div>
+                        <div class="doc-line"><span>Precio pactado:</span><b>$450.00 / u</b></div>
+                        <div class="doc-total"><span>Subtotal:</span> <b>$225,000.00</b></div>
+                      </div>
+                    </div>
+                    <div class="match-col">
+                      <div class="col-head mono"><span class="icon-tag">2</span> FACTURA SAT CFDI 4.0</div>
+                      <div class="doc-card">
+                        <span class="doc-id mono">UUID: 4A91-88FE-9901</span>
+                        <div class="doc-line"><span>SAT ClaveProdServ:</span><b>50192100</b></div>
+                        <div class="doc-line"><span>Precio Facturado:</span><b>$450.00 / u</b></div>
+                        <div class="doc-total"><span>Total Fiscal:</span> <b>$225,000.00</b></div>
+                      </div>
+                    </div>
+                    <div class="match-col">
+                      <div class="col-head mono"><span class="icon-tag">3</span> RECEPCIÓN ANDÉN (FÍSICA)</div>
+                      <div class="doc-card matched-border">
+                        <span class="doc-id mono text-emerald">CONTEO CIEGO CONFIRMADO</span>
+                        <div class="doc-line"><span>Escaneados:</span><b>500 sacos</b></div>
+                        <div class="doc-line"><span>Dañados / Merma:</span><b class="text-emerald">0 sacos</b></div>
+                        <div class="doc-total text-emerald"><span>Valuación Física:</span> <b>$225,000.00</b></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="match-verdict matched">
+                    <div class="verdict-icon">✓</div>
+                    <div class="verdict-text">
+                      <strong>3-Way Match 100% Conciliado sin discrepancias</strong>
+                      <p>Factura autorizada para programación de pago a tesorería. Diferencia: $0.00 MXN.</p>
+                    </div>
+                    <span class="verdict-stamp mono">LIBERADO PARA PAGO</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Panel 3: Racks 3D -->
+              <div class="console-panel" id="tab-racks" role="tabpanel">
+                <div class="racks-view">
+                  <div class="racks-header">
+                    <div class="racks-title">
+                      <span class="mono text-muted">MAPA TOPOGRÁFICO CEDIS CENTRAL</span>
+                      <h4>Pasillo A · Bahías 01 a 12 · Nivel Rack 01-04</h4>
+                    </div>
+                    <div class="racks-legend mono">
+                      <span><i class="dot-legend fefo-green"></i> FEFO Óptimo (&gt;180 días)</span>
+                      <span><i class="dot-legend fefo-amber"></i> Rotación Próxima (&lt;60 días)</span>
+                      <span><i class="dot-legend fefo-red"></i> Cuarentena Bloqueada</span>
+                    </div>
+                  </div>
+                  <div class="racks-grid-cells">
+                    <div class="rack-slot ok"><span class="slot-code mono">A-01-1</span><span class="slot-item">L-901</span></div>
+                    <div class="rack-slot ok"><span class="slot-code mono">A-01-2</span><span class="slot-item">L-902</span></div>
+                    <div class="rack-slot warn"><span class="slot-code mono">A-01-3</span><span class="slot-item">L-814 ⚠️</span></div>
+                    <div class="rack-slot ok"><span class="slot-code mono">A-02-1</span><span class="slot-item">L-990</span></div>
+                    <div class="rack-slot ok"><span class="slot-code mono">A-02-2</span><span class="slot-item">L-991</span></div>
+                    <div class="rack-slot danger"><span class="slot-code mono">A-02-3</span><span class="slot-item">BLOQ ⛔</span></div>
+                    <div class="rack-slot ok"><span class="slot-code mono">A-03-1</span><span class="slot-item">L-774</span></div>
+                    <div class="rack-slot ok"><span class="slot-code mono">A-03-2</span><span class="slot-item">L-775</span></div>
+                    <div class="rack-slot ok"><span class="slot-code mono">A-03-3</span><span class="slot-item">L-776</span></div>
+                  </div>
+                  <p class="rack-footnote mono">
+                    Algoritmo FEFO bloquea automáticamente ubicaciones con caducidad vencida antes de generar listas de picking.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Panel 4: Flota -->
+              <div class="console-panel" id="tab-flota" role="tabpanel">
+                <div class="fleet-view">
+                  <div class="fleet-card">
+                    <div class="fleet-head">
+                      <span class="mono">UNIDAD 08 · THERMO KING 4.5 TON</span>
+                      <span class="badge-status ok">EN RUTA · TRÁFICO FLUIDO</span>
+                    </div>
+                    <div class="fleet-details">
+                      <div><span>Chofer:</span> <b>Carlos Méndez</b></div>
+                      <div><span>Entregas:</span> <b>6 / 8 Completadas</b></div>
+                      <div><span>Temp. Cámara:</span> <b class="text-cyan">3.8 °C (NOM-251 OK)</b></div>
+                    </div>
+                    <div class="pod-preview">
+                      <div class="pod-sig mono">EVIDENCIA DIGITAL POD: FIRMA Y FOTO CAPTURADA EN DESTINO</div>
+                      <span class="badge-tag mono">SIN DISPUTAS EN ANDÉN CLIENTE</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TICKER TELEMETRÍA ================= -->
+    <section class="telemetry-bar" aria-label="Métricas comprobadas">
+      <div class="container telemetry-inner">
+        <div class="tel-item">
+          <span class="tel-number" data-count="140000">+140,000</span>
+          <span class="tel-label">Tarimas y pallets auditados</span>
+        </div>
+        <div class="tel-divider" aria-hidden="true"></div>
+        <div class="tel-item">
+          <span class="tel-number text-emerald" data-count="0">$0.00</span>
+          <span class="tel-label">Mermas fiscales no detectadas</span>
+        </div>
+        <div class="tel-divider" aria-hidden="true"></div>
+        <div class="tel-item">
+          <span class="tel-number" data-count="100">100%</span>
+          <span class="tel-label">Operación continua sin red (Offline)</span>
+        </div>
+        <div class="tel-divider" aria-hidden="true"></div>
+        <div class="tel-item">
+          <span class="tel-number text-cyan" data-count="99.98">99.98%</span>
+          <span class="tel-label">Exactitud de inventario ERI</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 02 DIAGNÓSTICO ================= -->
+    <section class="section section-diagnostic" id="diagnostico">
+      <div class="container">
+        <div class="sec-head sec-head-center reveal">
+          <span class="sec-label mono">02 / RADIOGRAFÍA DEL DOLOR</span>
+          <h2>¿Dónde se evapora el margen de tu operación hoy?</h2>
+          <p class="sec-lead">
+            Los almacenes tradicionales pierden entre 2% y 5% de su inventario total en mermas invisibles, pagos duplicados y paradas operativas que el ERP tradicional jamás reporta.
+          </p>
+        </div>
+
+        <div class="pain-grid">
+          <article class="pain-card reveal">
+            <div class="pain-icon-wrapper" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+              </svg>
+            </div>
+            <div class="pain-tag mono">FUGA FÍSICA</div>
+            <h3>Descuadre Ciego de Inventario</h3>
+            <p>
+              El ERP administrativo dice que tienes 100 piezas disponibles para venta. El montacarguista va al rack y solo encuentra 70. Ventas canceladas, clientes enfurecidos y merma sin culpable rastreable.
+            </p>
+            <div class="pain-solution">
+              <span class="sol-tag mono">CON PLUSG:</span>
+              <p>Kardex inmutable con conteo ciego asistido por escáner y doble credencial para cualquier ajuste.</p>
+            </div>
+          </article>
+
+          <article class="pain-card reveal">
+            <div class="pain-icon-wrapper" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l3.5-2 3.5 2 3.5-2 3.5 2z"/>
+              </svg>
+            </div>
+            <div class="pain-tag mono">FUGA FINANCIERA</div>
+            <h3>Pagos a Ciegas a Proveedores</h3>
+            <p>
+              Finanzas paga facturas completas por miles o millones de pesos porque el CFDI del SAT coincide con la Orden de Compra, sin saber que en el andén entraron 4 cajas rotas y 12 faltantes.
+            </p>
+            <div class="pain-solution">
+              <span class="sol-tag mono">CON PLUSG:</span>
+              <p>3-Way Match bloquea el pago del XML si el pesaje y conteo físico en andén no cuadra al centavo.</p>
+            </div>
+          </article>
+
+          <article class="pain-card reveal">
+            <div class="pain-icon-wrapper" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M1 1l22 22m-4.08-4.08A10.94 10.94 0 0023 12M5.08 5.08A10.94 10.94 0 001 12c2.76 4.78 8.04 8 11 8 1.13 0 2.22-.44 3.2-1.19M10.5 10.5a3 3 0 004.24 4.24"/>
+              </svg>
+            </div>
+            <div class="pain-tag mono">FUGA OPERATIVA</div>
+            <h3>Andén Paralizado por Caída de Red</h3>
+            <p>
+              El software en la nube se congela cuando el Wi-Fi del CEDIS parpadea o la colectora entra a una cámara frigorífica. Camiones varados, horas extra acumuladas y pedidos retrasados.
+            </p>
+            <div class="pain-solution">
+              <span class="sol-tag mono">CON PLUSG:</span>
+              <p>Modo Búnker Offline: los operadores siguen escaneando localmente a velocidad nativa sin conexión.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 03 BENTO GRID ARQUITECTURA ================= -->
+    <section class="section section-bento" id="bento">
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="sec-label mono">03 / ARQUITECTURA INDUSTRIAL</span>
+          <h2>Diferenciadores construidos para el rigor de piso</h2>
+          <p class="sec-lead">
+            Tecnología diseñada para cerrar la brecha entre el montacarguista que suda en el andén y el auditor fiscal del SAT.
+          </p>
+        </div>
+
+        <div class="bento-grid">
+          <!-- CARD 1: 3-WAY MATCH INTERACTIVO (SPAN 8) -->
+          <article class="bento-card bento-span-8 bento-match reveal">
+            <div class="bento-content">
+              <div class="bento-badge-row">
+                <span class="badge-tag mono">PROTECCIÓN FISCAL SAT</span>
+                <span class="mono text-muted">MÓDULO C-02</span>
+              </div>
+              <h3>Conciliación Dinámica 3-Way Match</h3>
+              <p>
+                Cruza automáticamente la <strong>Orden de Compra</strong>, el <strong>XML CFDI 4.0 del SAT</strong> y la <strong>Recepción Física en Andén</strong>. Si un solo producto o peso discrepa, el pago se retiene de inmediato.
+              </p>
+
+              <!-- Interactive Simulator Inside Card -->
+              <div class="bento-simulator">
+                <div class="sim-header">
+                  <span class="mono">SIMULADOR EN VIVO DE DISCREPANCIA:</span>
+                  <div class="sim-toggle-group">
+                    <button class="sim-btn active" id="btn-sim-ok" type="button">Caso: Todo Cuadra</button>
+                    <button class="sim-btn" id="btn-sim-warn" type="button">Caso: Faltante en Andén (-$18,400)</button>
+                  </div>
+                </div>
+
+                <div class="sim-display" id="sim-display">
+                  <div class="sim-step">
+                    <span class="step-num mono">1. OC</span>
+                    <strong>$450,000.00</strong>
+                    <small>1,000 u solicitadas</small>
+                  </div>
+                  <div class="sim-connector">⟷</div>
+                  <div class="sim-step">
+                    <span class="step-num mono">2. CFDI XML</span>
+                    <strong>$450,000.00</strong>
+                    <small>UUID SAT válido</small>
+                  </div>
+                  <div class="sim-connector">⟷</div>
+                  <div class="sim-step" id="sim-step-phys">
+                    <span class="step-num mono">3. FÍSICO</span>
+                    <strong class="text-emerald" id="sim-phys-val">$450,000.00</strong>
+                    <small id="sim-phys-sub">1,000 u escaneadas</small>
+                  </div>
+                </div>
+
+                <div class="sim-result ok" id="sim-result-box">
+                  <span class="sim-result-icon" id="sim-result-icon">✓</span>
+                  <span id="sim-result-msg"><strong>Conciliación Perfecta:</strong> Diferencia $0.00 MXN. Factura aprobada a tesorería.</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 2: MODO BÚNKER OFFLINE (SPAN 4) -->
+          <article class="bento-card bento-span-4 bento-offline reveal">
+            <div class="bento-content">
+              <div class="bento-badge-row">
+                <span class="badge-tag mono">RESILIENCIA MÓVIL</span>
+              </div>
+              <h3>Modo Búnker Offline-First</h3>
+              <p>
+                Las colectoras de datos guardan transacciones en SQLite local cifrado. Cuando el montacarguista sale de la cámara frigorífica o recupera 4G, sincroniza sin colisiones.
+              </p>
+
+              <div class="bunker-demo-box">
+                <div class="bunker-switch-row">
+                  <span class="mono" id="bunker-status-text">ESTADO: ONLINE (Wi-Fi 5GHz)</span>
+                  <button class="switch-toggle" id="bunker-toggle" type="button" aria-pressed="false" aria-label="Simular corte de conexión">
+                    <span class="switch-handle"></span>
+                  </button>
+                </div>
+                <div class="bunker-log-box mono" id="bunker-log">
+                  <div>[10:42:01] Conexión estable con servidor CEDIS.</div>
+                  <div>[10:42:04] Escaneada tarima #LPN-8891 (0ms latencia).</div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 3: TRAZABILIDAD FEFO 3D (SPAN 4) -->
+          <article class="bento-card bento-span-4 reveal">
+            <div class="bento-content">
+              <div class="bento-badge-row">
+                <span class="badge-tag mono">INOCUIDAD NOM-251</span>
+              </div>
+              <h3>Algoritmo FEFO &amp; Cuarentena 3D</h3>
+              <p>
+                First Expired, First Out. El sistema obliga al operario a recoger el lote más próximo a caducar. Si un lote se vence, el rack se bloquea en rojo y no permite despacho.
+              </p>
+              <div class="fefo-visual-strip">
+                <div class="fefo-block optimal"><span>LOTE A</span><small>&gt;180 d</small></div>
+                <div class="fefo-block warn"><span>LOTE B</span><small>&lt;45 d (Pick)</small></div>
+                <div class="fefo-block locked"><span>LOTE C</span><small>BLOQUEADO</small></div>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 4: DOBLE CREDENCIAL (SPAN 4) -->
+          <article class="bento-card bento-span-4 reveal">
+            <div class="bento-content">
+              <div class="bento-badge-row">
+                <span class="badge-tag mono">GOBIERNO &amp; SEGURIDAD</span>
+              </div>
+              <h3>Doble Credencial Forense</h3>
+              <p>
+                Cero ajustes "mágicos". Para dar de baja una pieza, mover una ubicación en cuarentena o anular una recepción, se requiere la llave criptográfica del supervisor de turno.
+              </p>
+              <div class="security-chip-box mono">
+                <div class="sec-row"><span>FIRMA OPERADOR:</span> <b class="text-emerald">VERIFICADA</b></div>
+                <div class="sec-row"><span>FIRMA AUDITOR:</span> <b class="text-cyan">REQUERIDA (2FA)</b></div>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 5: SURTIDO ANTI-APLASTAMIENTO (SPAN 4) -->
+          <article class="bento-card bento-span-4 reveal">
+            <div class="bento-content">
+              <div class="bento-badge-row">
+                <span class="badge-tag mono">LOGÍSTICA INVERSA 0%</span>
+              </div>
+              <h3>Picking Anti-Aplastamiento</h3>
+              <p>
+                La ruta de surtido ordena el recorrido por peso, volumen y fragilidad. Las tarimas salen balanceadas de fábrica, eliminando mermas por aplastamiento en tránsito.
+              </p>
+              <div class="stack-visual">
+                <div class="stack-layer light">Ligero y frágil (superior)</div>
+                <div class="stack-layer med">Cajas medias / Embalaje secundario</div>
+                <div class="stack-layer heavy">Carga pesada / Cubetas / Costales (base)</div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 04 CALCULADORA ROI INTERACTIVA ================= -->
+    <section class="section section-calc" id="calculadora">
+      <div class="container">
+        <div class="calc-wrapper reveal">
+          <div class="calc-head">
+            <span class="sec-label mono">04 / SIMULADOR FINANCIERO</span>
+            <h2>Calculadora de Merma y Retorno de Inversión</h2>
+            <p>
+              Estima cuánto capital está perdiendo tu empresa cada mes en descuadres, mermas de caducidad y pagos ciegos a proveedores, y cuánto recuperarás implementando PlusG.
+            </p>
+          </div>
+
+          <div class="calc-grid">
+            <!-- Controls -->
+            <div class="calc-controls">
+              <div class="calc-field">
+                <div class="calc-field-head">
+                  <label for="range-inventario">Valor del Inventario o Facturación Mensual</label>
+                  <span class="calc-val-badge mono" id="val-inventario">$10,000,000 MXN</span>
+                </div>
+                <input class="calc-slider" id="range-inventario" type="range" min="1000000" max="60000000" step="500000" value="10000000">
+                <div class="slider-limits mono"><span>$1M MXN</span><span>$30M</span><span>$60M+ MXN</span></div>
+              </div>
+
+              <div class="calc-field">
+                <div class="calc-field-head">
+                  <label for="range-merma">Estimación de Merma y Descuadre Actual</label>
+                  <span class="calc-val-badge mono" id="val-merma">2.5%</span>
+                </div>
+                <input class="calc-slider" id="range-merma" type="range" min="0.5" max="6.0" step="0.1" value="2.5">
+                <div class="slider-limits mono"><span>0.5% (Mínimo)</span><span>2.5% (Promedio)</span><span>6.0% (Crítico)</span></div>
+              </div>
+
+              <div class="calc-disclaimer mono">
+                *Cálculos basados en métricas estándar de Supply Chain (APICS / SCOR) con reducción comprobada del 75% al 90% en mermas operativas y 100% en pagos de facturas con discrepancias físicas.
+              </div>
+            </div>
+
+            <!-- Live Results Board -->
+            <div class="calc-results-card">
+              <div class="results-header">
+                <span class="mono text-muted">IMPACTO FINANCIERO ESTIMADO</span>
+                <span class="badge-status ok">PROYECCIÓN ANUAL</span>
+              </div>
+
+              <div class="metric-row">
+                <span class="metric-desc">Fuga de dinero anual estimada sin control:</span>
+                <span class="metric-num text-danger" id="res-fuga">-$3,000,000 MXN</span>
+              </div>
+
+              <div class="metric-row highlight">
+                <span class="metric-desc">Capital recuperado y blindado con PlusG:</span>
+                <span class="metric-num text-emerald" id="res-recuperado">+$2,550,000 MXN</span>
+              </div>
+
+              <div class="metric-row">
+                <span class="metric-desc">Horas operativas ahorradas al año en andén:</span>
+                <span class="metric-num text-cyan" id="res-horas">+1,420 hrs</span>
+              </div>
+
+              <div class="calc-cta-wrap">
+                <button class="btn btn-accent btn-block" type="button" data-open-demo>
+                  Blindar este monto con una Demo
+                </button>
+                <small class="mono text-center">Diagnóstico técnico personalizado en 15 minutos</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 05 ECOSISTEMA DE MÓDULOS A–H ================= -->
+    <section class="section section-modules" id="modulos">
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="sec-label mono">05 / ARQUITECTURA MODULAR INTEGRADA</span>
+          <h2>Ecosistema Completo de Módulos (A–H)</h2>
+          <p class="sec-lead">
+            Ocho frentes que comparten una única base de datos inmutable. Selecciona un módulo para explorar su alcance operativo en tiempo real.
+          </p>
+        </div>
+
+        <div class="modules-explorer reveal">
+          <!-- Module Selector Sidebar -->
+          <div class="module-nav" role="tablist" aria-label="Módulos del WMS-ERP">
+            <button class="mod-nav-btn active" role="tab" aria-selected="true" data-mod="mod-a">
+              <span class="mod-letter mono">A</span>
+              <span class="mod-info">
+                <strong>Compras y SAT CFDI 4.0</strong>
+                <small>Validación fiscal y comparativos</small>
+              </span>
+            </button>
+
+            <button class="mod-nav-btn" role="tab" aria-selected="false" data-mod="mod-b">
+              <span class="mod-letter mono">B</span>
+              <span class="mod-info">
+                <strong>Recepción y Andén</strong>
+                <small>Conteo ciego y cross-docking</small>
+              </span>
+            </button>
+
+            <button class="mod-nav-btn" role="tab" aria-selected="false" data-mod="mod-c">
+              <span class="mod-letter mono">C</span>
+              <span class="mod-info">
+                <strong>Inventario, Racks y FEFO</strong>
+                <small>Topografía 3D y cuarentenas</small>
+              </span>
+            </button>
+
+            <button class="mod-nav-btn" role="tab" aria-selected="false" data-mod="mod-d">
+              <span class="mod-letter mono">D</span>
+              <span class="mod-info">
+                <strong>Picking Anti-Aplastamiento</strong>
+                <small>Rutas por peso y fragilidad</small>
+              </span>
+            </button>
+
+            <button class="mod-nav-btn" role="tab" aria-selected="false" data-mod="mod-e">
+              <span class="mod-letter mono">E</span>
+              <span class="mod-info">
+                <strong>Flotilla y Última Milla</strong>
+                <small>Evidencia POD y control de chofer</small>
+              </span>
+            </button>
+
+            <button class="mod-nav-btn" role="tab" aria-selected="false" data-mod="mod-f">
+              <span class="mod-letter mono">F</span>
+              <span class="mod-info">
+                <strong>Logística Inversa</strong>
+                <small>Devoluciones a proveedor a $0.00</small>
+              </span>
+            </button>
+
+            <button class="mod-nav-btn" role="tab" aria-selected="false" data-mod="mod-g">
+              <span class="mod-letter mono">G</span>
+              <span class="mod-info">
+                <strong>Auditoría &amp; Kardex</strong>
+                <small>Trazabilidad forense SHA-256</small>
+              </span>
+            </button>
+
+            <button class="mod-nav-btn" role="tab" aria-selected="false" data-mod="mod-h">
+              <span class="mod-letter mono">H</span>
+              <span class="mod-info">
+                <strong>Centro Ejecutivo de KPIs</strong>
+                <small>OTIF, Fill Rate y ERI para comité</small>
+              </span>
+            </button>
+          </div>
+
+          <!-- Dynamic Module Screen Showcase -->
+          <div class="module-screen-wrap">
+            <!-- Screen A -->
+            <div class="module-screen active" id="mod-a" role="tabpanel">
+              <div class="screen-header">
+                <span class="mono text-cyan">MÓDULO A // COMPRAS &amp; CFDI 4.0</span>
+                <h3>Blindaje contra facturas apócrifas y sobrecostos</h3>
+              </div>
+              <p>
+                Importa automáticamente las facturas XML emitidas por tus proveedores. El sistema verifica vigencia en el SAT, comprueba retenciones (IVA, IEPS) y las coteja con la orden de compra antes de autorizar cualquier descarga en andén.
+              </p>
+              <div class="screen-spec-grid">
+                <div class="spec-card">
+                  <span class="spec-label mono">CARGA MASIVA</span>
+                  <strong>Lectura directa de XML</strong>
+                  <p>Sin digitación manual; desglose automático de partidas y claves SAT.</p>
+                </div>
+                <div class="spec-card">
+                  <span class="spec-label mono">LISTAS NEGRAS</span>
+                  <strong>Cruce con Art. 69-B</strong>
+                  <p>Alerta instantánea ante proveedores boletinados por el SAT.</p>
+                </div>
+              </div>
+              <div class="screen-tags mono">
+                <span>CFDI 4.0</span><span>SAT ART. 69-B</span><span>IEPS DESGLOSADO</span><span>RETENCIONES</span>
+              </div>
+            </div>
+
+            <!-- Screen B -->
+            <div class="module-screen" id="mod-b" role="tabpanel">
+              <div class="screen-header">
+                <span class="mono text-cyan">MÓDULO B // RECEPCIÓN &amp; ANDÉN</span>
+                <h3>Conteo ciego y pesaje sin trampas en andén</h3>
+              </div>
+              <p>
+                El operador no sabe cuántas piezas vienen en la factura: el sistema le exige contar o pesar físicamente. Si el conteo no coincide con el albarán, el sistema solicita doble verificación o rechazo de tarima.
+              </p>
+              <div class="screen-spec-grid">
+                <div class="spec-card">
+                  <span class="spec-label mono">CROSS-DOCKING</span>
+                  <strong>Despacho sin almacenamiento</strong>
+                  <p>Identifica pedidos urgentes y los transfiere de andén de entrada a salida directo.</p>
+                </div>
+                <div class="spec-card">
+                  <span class="spec-label mono">ETIQUETADO LPN</span>
+                  <strong>Matrícula única por pallet</strong>
+                  <p>Genera e imprime código GS1-128 con lote, caducidad y número de bultos.</p>
+                </div>
+              </div>
+              <div class="screen-tags mono">
+                <span>CONTEO CIEGO</span><span>CROSS-DOCKING</span><span>LPN GS1-128</span><span>CONTROL DE PESO</span>
+              </div>
+            </div>
+
+            <!-- Screen C -->
+            <div class="module-screen" id="mod-c" role="tabpanel">
+              <div class="screen-header">
+                <span class="mono text-cyan">MÓDULO C // INVENTARIO, RACKS &amp; FEFO</span>
+                <h3>Topografía tridimensional con blindaje por caducidad</h3>
+              </div>
+              <p>
+                Ubicaciones codificadas por pasillo, bahía, nivel y profundidad. Visualiza la ocupación volumétrica y asigna sugerencias de acomodo según velocidad de rotación ABC.
+              </p>
+              <div class="screen-spec-grid">
+                <div class="spec-card">
+                  <span class="spec-label mono">ROTACIÓN ABC</span>
+                  <strong>Ranurado inteligente</strong>
+                  <p>Coloca la mercancía de alta rotación cerca del andén para reducir tiempos de recorrido.</p>
+                </div>
+                <div class="spec-card">
+                  <span class="spec-label mono">CUARENTENA</span>
+                  <strong>Aislamiento preventivo</strong>
+                  <p>Retiene lotes observados por calidad sin permitir su liberación a piso.</p>
+                </div>
+              </div>
+              <div class="screen-tags mono">
+                <span>RACKS 3D</span><span>FEFO / FIFO</span><span>CLASIFICACIÓN ABC</span><span>REUBICACIONES</span>
+              </div>
+            </div>
+
+            <!-- Screen D -->
+            <div class="module-screen" id="mod-d" role="tabpanel">
+              <div class="screen-header">
+                <span class="mono text-cyan">MÓDULO D // PICKING INTELIGENTE</span>
+                <h3>Rutas optimizadas que cuidan la integridad del producto</h3>
+              </div>
+              <p>
+                Algoritmo heurístico que guía al montacarguista o surtidor por la ruta más corta sin cruzarse con otros equipos. Prioriza recoger primero la base pesada y al final los artículos frágiles.
+              </p>
+              <div class="screen-spec-grid">
+                <div class="spec-card">
+                  <span class="spec-label mono">PICK-TO-BOX / PALLET</span>
+                  <strong>Multi-pedido simultáneo</strong>
+                  <p>Surtido de hasta 6 órdenes en un solo recorrido sin errores de mezcla.</p>
+                </div>
+                <div class="spec-card">
+                  <span class="spec-label mono">VALIDACIÓN DE BARRAS</span>
+                  <strong>Cero piezas equivocadas</strong>
+                  <p>Obliga a escanear el código de barra antes de confirmar la colocación en el carro.</p>
+                </div>
+              </div>
+              <div class="screen-tags mono">
+                <span>ANTI-APLASTAMIENTO</span><span>PICK-TO-PALLET</span><span>WAVE PICKING</span><span>RUTA ÓPTIMA</span>
+              </div>
+            </div>
+
+            <!-- Screen E -->
+            <div class="module-screen" id="mod-e" role="tabpanel">
+              <div class="screen-header">
+                <span class="mono text-cyan">MÓDULO E // FLOTILLA &amp; ÚLTIMA MILLA</span>
+                <h3>Custodia de carga y prueba de entrega digital (POD)</h3>
+              </div>
+              <p>
+                Asignación de unidades por peso y cubicaje. El chofer recibe su hoja de ruta en el móvil, registra firma de recibido, captura fotos de la entrega y reporta mermas en el cliente al instante.
+              </p>
+              <div class="screen-spec-grid">
+                <div class="spec-card">
+                  <span class="spec-label mono">APP CONDUCTOR</span>
+                  <strong>Firma digital y georreferencia</strong>
+                  <p>Evidencia fotográfica con timestamp y coordenadas GPS inalterables.</p>
+                </div>
+                <div class="spec-card">
+                  <span class="spec-label mono">LIQUIDACIÓN DE RUTA</span>
+                  <strong>Cierre de caja en 5 minutos</strong>
+                  <p>Concilia pedidos entregados, cobros y devoluciones sin discusiones nocturnas.</p>
+                </div>
+              </div>
+              <div class="screen-tags mono">
+                <span>PROOF OF DELIVERY</span><span>GPS TRACKING</span><span>CUSTODIA DE CARGA</span><span>LIQUIDACIÓN</span>
+              </div>
+            </div>
+
+            <!-- Screen F -->
+            <div class="module-screen" id="mod-f" role="tabpanel">
+              <div class="screen-header">
+                <span class="mono text-cyan">MÓDULO F // LOGÍSTICA INVERSA</span>
+                <h3>Reclamos a proveedores y notas de crédito aseguradas</h3>
+              </div>
+              <p>
+                Transforma las devoluciones de clientes y rechazos a proveedores en notas de crédito cobrables. Controla el motivo de merma (caducidad, daño de empaque, faltante) para negociar con el fabricante.
+              </p>
+              <div class="screen-spec-grid">
+                <div class="spec-card">
+                  <span class="spec-label mono">EXPEDIENTE DE MERMA</span>
+                  <strong>Dossier probatorio con foto</strong>
+                  <p>Envía al proveedor reporte formal con evidencia para evitar controversias.</p>
+                </div>
+                <div class="spec-card">
+                  <span class="spec-label mono">IMPACTO FINANCIERO $0</span>
+                  <strong>Generación de nota de débito</strong>
+                  <p>Ajusta el saldo de cuentas por pagar automáticamente.</p>
+                </div>
+              </div>
+              <div class="screen-tags mono">
+                <span>RMA</span><span>DEVOLUCIONES PROVEEDOR</span><span>NOTAS DE CRÉDITO</span><span>CAUSA RAÍZ</span>
+              </div>
+            </div>
+
+            <!-- Screen G -->
+            <div class="module-screen" id="mod-g" role="tabpanel">
+              <div class="screen-header">
+                <span class="mono text-cyan">MÓDULO G // AUDITORÍA &amp; KARDEX</span>
+                <h3>Kardex inmutable con hash criptográfico forense</h3>
+              </div>
+              <p>
+                Cada movimiento (entrada, reubicación, ajuste, salida) queda sellado con fecha, hora, usuario, terminal y motivo. Imposible alterar registros históricos desde la base de datos sin romper la cadena.
+              </p>
+              <div class="screen-spec-grid">
+                <div class="spec-card">
+                  <span class="spec-label mono">CONTEOS CÍCLICOS</span>
+                  <strong>Inventario sin detener el CEDIS</strong>
+                  <p>Asigna conteos diarios por rotación ABC mientras la operación sigue despachando.</p>
+                </div>
+                <div class="spec-card">
+                  <span class="spec-label mono">TRAZABILIDAD FORENSE</span>
+                  <strong>Historial completo por pieza</strong>
+                  <p>Rastrea quién tocó cada pallet desde que llegó en el camión hasta la entrega.</p>
+                </div>
+              </div>
+              <div class="screen-tags mono">
+                <span>KARDEX INMUTABLE</span><span>CONTEOS CÍCLICOS</span><span>SELLO SHA-256</span><span>AUDITORÍA SAT</span>
+              </div>
+            </div>
+
+            <!-- Screen H -->
+            <div class="module-screen" id="mod-h" role="tabpanel">
+              <div class="screen-header">
+                <span class="mono text-cyan">MÓDULO H // CENTRO EJECUTIVO OTIF</span>
+                <h3>Métricas de nivel de servicio para consejo y dirección</h3>
+              </div>
+              <p>
+                Tableros en tiempo real con los indicadores universales de la cadena de suministro: On-Time In-Full (OTIF), Fill Rate, exactitud de inventario ERI y costo de merma acumulado.
+              </p>
+              <div class="screen-spec-grid">
+                <div class="spec-card">
+                  <span class="spec-label mono">OTIF EN TIEMPO REAL</span>
+                  <strong>A tiempo y completo</strong>
+                  <p>Mide el cumplimiento exacto hacia sucursales o clientes mayoristas.</p>
+                </div>
+                <div class="spec-card">
+                  <span class="spec-label mono">REPORTES AUTOMATIZADOS</span>
+                  <strong>Informes a directores</strong>
+                  <p>Envío programado de métricas al correo de socios y dirección general.</p>
+                </div>
+              </div>
+              <div class="screen-tags mono">
+                <span>OTIF 99%+</span><span>FILL RATE</span><span>ERI $</span><span>APICS METRICS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 06 MATRIZ DE ROLES RBAC ================= -->
+    <section class="section section-roles" id="roles">
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="sec-label mono">06 / GOBIERNO CORPORATIVO</span>
+          <h2>Seguridad Basada en Roles (RBAC)</h2>
+          <p class="sec-lead">
+            Cada colaborador tiene exactamente la interfaz y los permisos que necesita. Ni un dato expuesto de más, ni un ajuste no autorizado.
+          </p>
+        </div>
+
+        <div class="roles-board reveal">
+          <div class="roles-tabs" role="tablist" aria-label="Perfiles de usuario">
+            <button class="role-tab-btn active" role="tab" aria-selected="true" data-role="role-cfo">Dirección / CFO</button>
+            <button class="role-tab-btn" role="tab" aria-selected="false" data-role="role-compras">Compras &amp; Finanzas</button>
+            <button class="role-tab-btn" role="tab" aria-selected="false" data-role="role-almacen">Jefe de CEDIS</button>
+            <button class="role-tab-btn" role="tab" aria-selected="false" data-role="role-operador">Operador / Montacargas</button>
+            <button class="role-tab-btn" role="tab" aria-selected="false" data-role="role-chofer">Chofer de Reparto</button>
+            <button class="role-tab-btn" role="tab" aria-selected="false" data-role="role-auditor">Auditor Fiscal</button>
+          </div>
+
+          <div class="roles-content-card">
+            <!-- CFO -->
+            <div class="role-view active" id="role-cfo" role="tabpanel">
+              <div class="role-view-head">
+                <span class="role-title">Director General &amp; CFO</span>
+                <span class="badge-tag mono">ACCESO TOTAL ESTRATÉGICO</span>
+              </div>
+              <p>Visión panorámica de la rentabilidad logística, mermas mensuales evitadas, OTIF de clientes clave y control de autorización de pagos extraordinarios.</p>
+              <div class="role-perms-grid">
+                <div class="perm-col">
+                  <span class="perm-head mono text-emerald">✓ PUEDE VER Y EJECUTAR</span>
+                  <ul>
+                    <li>Tableros ejecutivos de OTIF, Fill Rate y Merma en $.</li>
+                    <li>Bloqueo o desbloqueo final de facturas con discrepancia.</li>
+                    <li>Configuración de políticas de tolerancia y crédito.</li>
+                  </ul>
+                </div>
+                <div class="perm-col">
+                  <span class="perm-head mono text-cyan">🔒 PROTECCIONES</span>
+                  <ul>
+                    <li>No puede alterar registros de conteos físicos directos.</li>
+                    <li>Todo movimiento de autorización queda con firma digital en log.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Compras -->
+            <div class="role-view" id="role-compras" role="tabpanel">
+              <div class="role-view-head">
+                <span class="role-title">Gerente de Compras &amp; Cuentas por Pagar</span>
+                <span class="badge-tag mono">MÓDULO DE ADQUISICIONES</span>
+              </div>
+              <p>Emite órdenes de compra, carga facturas XML del SAT, analiza comparativos de precio por proveedor y da seguimiento a reclamos por mercancía dañada.</p>
+              <div class="role-perms-grid">
+                <div class="perm-col">
+                  <span class="perm-head mono text-emerald">✓ PUEDE VER Y EJECUTAR</span>
+                  <ul>
+                    <li>Carga y validación masiva de XML CFDI 4.0.</li>
+                    <li>Conciliación automática con órdenes de compra.</li>
+                    <li>Generación de notas de débito a proveedores por mermas.</li>
+                  </ul>
+                </div>
+                <div class="perm-col">
+                  <span class="perm-head mono text-cyan">🔒 PROTECCIONES</span>
+                  <ul>
+                    <li>No puede manipular ubicaciones de almacén ni conteos.</li>
+                    <li>No puede autorizar pagos si 3-Way Match detecta faltantes.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Jefe Almacen -->
+            <div class="role-view" id="role-almacen" role="tabpanel">
+              <div class="role-view-head">
+                <span class="role-title">Jefe de CEDIS y Almacenes</span>
+                <span class="badge-tag mono">CONTROL OPERATIVO TOTAL</span>
+              </div>
+              <p>Gobierna el andén, asigna turnos, gestiona el mapa 3D de racks, autoriza cuarentenas de lotes y supervisa las oleadas de picking de cada ruta.</p>
+              <div class="role-perms-grid">
+                <div class="perm-col">
+                  <span class="perm-head mono text-emerald">✓ PUEDE VER Y EJECUTAR</span>
+                  <ul>
+                    <li>Asignación de tareas a montacarguistas y pistolas.</li>
+                    <li>Reubicación de racks y bloqueos por calidad/cuarentena.</li>
+                    <li>Aprobación de conteos cíclicos con doble credencial.</li>
+                  </ul>
+                </div>
+                <div class="perm-col">
+                  <span class="perm-head mono text-cyan">🔒 PROTECCIONES</span>
+                  <ul>
+                    <li>No puede borrar artículos del catálogo ni modificar precios.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Operador -->
+            <div class="role-view" id="role-operador" role="tabpanel">
+              <div class="role-view-head">
+                <span class="role-title">Operador de Piso y Montacargas</span>
+                <span class="badge-tag mono">INTERFAZ COLECTORA RUGGED</span>
+              </div>
+              <p>Interfaz optimizada para pantallas táctiles de pistolas industriales o guantes. Navega rutas guiadas, escanea códigos de barras y confirma picks en milisegundos.</p>
+              <div class="role-perms-grid">
+                <div class="perm-col">
+                  <span class="perm-head mono text-emerald">✓ PUEDE VER Y EJECUTAR</span>
+                  <ul>
+                    <li>Escaneo de códigos de barra, LPN y ubicaciones.</li>
+                    <li>Confirmación de picking guiado anti-aplastamiento.</li>
+                    <li>Registro de conteo ciego en andén sin ver totales.</li>
+                  </ul>
+                </div>
+                <div class="perm-col">
+                  <span class="perm-head mono text-cyan">🔒 PROTECCIONES</span>
+                  <ul>
+                    <li>Cero acceso a precios, datos financieros o reportes del SAT.</li>
+                    <li>Imposible forzar un pick sin escanear el código correcto.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Chofer -->
+            <div class="role-view" id="role-chofer" role="tabpanel">
+              <div class="role-view-head">
+                <span class="role-title">Chofer de Reparto &amp; Última Milla</span>
+                <span class="badge-tag mono">APP MÓVIL ANDROID</span>
+              </div>
+              <p>Recibe la custodia de la carga al salir del andén, sigue la secuencia de paradas en el mapa, y recaba firma digital y fotografías en cada punto de entrega.</p>
+              <div class="role-perms-grid">
+                <div class="perm-col">
+                  <span class="perm-head mono text-emerald">✓ PUEDE VER Y EJECUTAR</span>
+                  <ul>
+                    <li>Hoja de ruta digital con secuencia de paradas.</li>
+                    <li>Captura de firmas de recibido y fotos de andén cliente.</li>
+                    <li>Registro inmediato de devoluciones o rechazos parciales.</li>
+                  </ul>
+                </div>
+                <div class="perm-col">
+                  <span class="perm-head mono text-cyan">🔒 PROTECCIONES</span>
+                  <ul>
+                    <li>No puede alterar cantidades de la remisión original.</li>
+                    <li>Requiere GPS activo para registrar la prueba de entrega.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Auditor -->
+            <div class="role-view" id="role-auditor" role="tabpanel">
+              <div class="role-view-head">
+                <span class="role-title">Auditor Interno &amp; Fiscal</span>
+                <span class="badge-tag mono">AUDITORÍA FORENSE DE DATOS</span>
+              </div>
+              <p>Acceso de solo lectura a la cadena completa de custodia. Audita sellos SHA-256 de movimientos, trazas de usuario y conciliaciones con el SAT.</p>
+              <div class="role-perms-grid">
+                <div class="perm-col">
+                  <span class="perm-head mono text-emerald">✓ PUEDE VER Y EJECUTAR</span>
+                  <ul>
+                    <li>Kardex inmutable y log de accesos de todo el personal.</li>
+                    <li>Verificación de consistencia física vs contable para el SAT.</li>
+                    <li>Exportación de reportes listos para dictamen financiero.</li>
+                  </ul>
+                </div>
+                <div class="perm-col">
+                  <span class="perm-head mono text-cyan">🔒 PROTECCIONES</span>
+                  <ul>
+                    <li>Perfil 100% de solo lectura. Imposible editar o borrar transacciones.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 07 ESTÁNDARES & COMPATIBILIDAD ================= -->
+    <section class="section section-standards">
+      <div class="container">
+        <div class="sec-head sec-head-center reveal">
+          <span class="sec-label mono">07 / CUMPLIMIENTO &amp; HARDWARE</span>
+          <h2>Certificado para los estándares más exigentes</h2>
+          <p class="sec-lead">
+            Sin adaptaciones improvisadas. Compatible de fábrica con los organismos normativos y fabricantes de hardware líderes.
+          </p>
+        </div>
+
+        <div class="standards-grid reveal">
+          <div class="std-card">
+            <div class="std-badge mono">MÉXICO FISCAL</div>
+            <h4>SAT CFDI 4.0</h4>
+            <p>Validación de sello digital, Complemento Carta Porte 3.0, claves de producto y retenciones fiscales sin desfases.</p>
+          </div>
+          <div class="std-card">
+            <div class="std-badge mono">CALIDAD &amp; SALUD</div>
+            <h4>NOM-251-SSA1-2009</h4>
+            <p>Cumplimiento de prácticas de higiene, control estricto de temperatura, trazabilidad de lote y retención preventiva.</p>
+          </div>
+          <div class="std-card">
+            <div class="std-badge mono">SUPPLY CHAIN GLOBAL</div>
+            <h4>APICS / ASCM SCOR</h4>
+            <p>Arquitectura alineada a las mejores prácticas mundiales de gestión de inventarios y niveles de servicio OTIF.</p>
+          </div>
+          <div class="std-card">
+            <div class="std-badge mono">HARDWARE RUDO</div>
+            <h4>Zebra &amp; Honeywell</h4>
+            <p>Integración nativa con lectores de código de barras 1D/2D, terminales montadas en vehículo y colectores Android.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 08 FAQ INTERACTIVO ================= -->
+    <section class="section section-faq" id="faq">
+      <div class="container faq-container">
+        <div class="sec-head reveal">
+          <span class="sec-label mono">08 / PREGUNTAS FRECUENTES</span>
+          <h2>Dudas resueltas para directores y equipos de TI</h2>
+          <p class="sec-lead">
+            Todo lo que necesitas saber antes de modernizar la infraestructura de tu almacén.
+          </p>
+        </div>
+
+        <div class="faq-accordion reveal">
+          <div class="faq-item">
+            <button class="faq-trigger" type="button" aria-expanded="false">
+              <span>¿Qué ocurre si el almacén se queda sin conexión a internet o falla el Wi-Fi?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-body" hidden>
+              <p>
+                <strong>La operación nunca se detiene.</strong> PlusG está construido con arquitectura <em>Offline-First (Modo Búnker)</em>. Las terminales y pistolas industriales cuentan con motor de datos local en SQLite cifrado. Los operadores siguen escaneando, recibiendo y surtiendo normalmente. Al recuperar señal Wi-Fi o datos celulares, el sistema sincroniza automáticamente sin duplicidad ni pérdida de transacciones.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" type="button" aria-expanded="false">
+              <span>¿Cómo se integra PlusG con nuestro sistema actual (SAP, Oracle, Aspel, Contpaqi o Excel)?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-body" hidden>
+              <p>
+                PlusG cuenta con conectores API REST bidireccionales y soporte para intercambio de archivos XML/JSON/CSV. Puede funcionar como tu <strong>WMS de piso de alta velocidad</strong> sincronizado con tu ERP contable central, o asumir el ciclo completo desde la orden de compra hasta la factura del SAT.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" type="button" aria-expanded="false">
+              <span>¿Qué tipo de pistolas o terminales de escaneo requerimos comprar?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-body" hidden>
+              <p>
+                Funciona en cualquier dispositivo con sistema operativo Android moderno (desde pistolas de uso rudo Zebra TC21/TC26, Honeywell ScanPal, Urovo, hasta teléfonos inteligentes comerciales con lector de cámara o escáner Bluetooth tipo anillo). No estás atado a hardware propietario costoso.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" type="button" aria-expanded="false">
+              <span>¿Cuánto tiempo toma la puesta en marcha e implementación en nuestro CEDIS?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-body" hidden>
+              <p>
+                A diferencia de los ERPs tradicionales que tardan de 9 a 18 meses, la implementación estándar de PlusG toma <strong>entre 3 y 6 semanas</strong>: incluye levantamiento topográfico de racks, codificación de ubicaciones, capacitación práctica a montacarguistas en andén y puesta en marcha con acompañamiento presencial.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" type="button" aria-expanded="false">
+              <span>¿Cómo garantiza PlusG que los operadores no maquillen el inventario?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-body" hidden>
+              <p>
+                Mediante dos principios técnicos inquebrantables: <strong>Conteo ciego</strong> (el operario debe contar físicamente sin saber la cifra esperada) y <strong>Doble Credencial Forense</strong> con registro inmutable SHA-256. Todo ajuste o merma exige la autorización con clave criptográfica del supervisor y queda registrado permanentemente para auditorías.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 09 CTA FINAL DE IMPACTO ================= -->
+    <section class="section-cta" id="contacto">
+      <div class="cta-ambient-glow" aria-hidden="true"></div>
+      <div class="container cta-container reveal">
+        <div class="cta-box">
+          <span class="badge-tag mono"><span class="pulse-dot"></span> IMPLEMENTACIÓN INMEDIATA</span>
+          <h2>Deja de calcular pérdidas.<br><span class="text-gradient">Empieza a blindar tu margen.</span></h2>
+          <p class="cta-lead">
+            Coordina una sesión de diagnóstico operativo de 15 minutos con nuestros especialistas. Analizaremos tu flujo actual de andén y te mostraremos en vivo cómo eliminar las mermas invisibles.
+          </p>
+
+          <div class="cta-actions">
+            <button class="btn btn-accent btn-xl" type="button" data-open-demo>
+              <span>Solicitar Demostración de 15 Minutos</span>
+              <svg class="btn-arrow" viewBox="0 0 20 20" fill="currentColor" width="20" height="20" aria-hidden="true">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="cta-perks mono">
+            <span>✓ Sesión personalizada</span>
+            <span>✓ Diagnóstico de mermas $0</span>
+            <span>✓ Sin compromiso de compra</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand-col">
+          <a class="brand brand-foot" href="#top" aria-label="PlusG, inicio">
+            <img class="brand-mark" src="assets/logo.png" onerror="this.onerror=null;this.src='logo.png';" alt="PlusG WMS-ERP" width="34" height="34">
+            <span class="brand-name">Plus<span>G</span></span>
+          </a>
+          <p class="footer-tagline">
+            Plataforma WMS-ERP industrial de alto rendimiento. Control físico, auditoría financiera 3-Way Match y blindaje fiscal CFDI 4.0 para empresas en crecimiento.
+          </p>
+          <div class="footer-status-pill mono">
+            <span class="live-dot"></span> SISTEMAS 100% OPERATIVOS · SLA 99.9%
+          </div>
+        </div>
+
+        <div class="footer-links-col">
+          <span class="footer-col-title mono">NAVEGACIÓN</span>
+          <nav class="footer-nav-list" aria-label="Enlaces de navegación">
+            <a href="#diagnostico">Diagnóstico de Fugas</a>
+            <a href="#bento">Diferenciadores Clave</a>
+            <a href="#calculadora">Simulador ROI</a>
+            <a href="#modulos">Ecosistema Módulos A–H</a>
+            <a href="#roles">Matriz de Roles RBAC</a>
+            <a href="#faq">Preguntas Técnicas</a>
+          </nav>
+        </div>
+
+        <div class="footer-links-col">
+          <span class="footer-col-title mono">ARQUITECTURA</span>
+          <ul class="footer-nav-list">
+            <li><span class="text-muted">SAT CFDI 4.0 Validated</span></li>
+            <li><span class="text-muted">NOM-251 Inocuidad</span></li>
+            <li><span class="text-muted">Modo Búnker Offline-First</span></li>
+            <li><span class="text-muted">Kardex Criptográfico SHA-256</span></li>
+            <li><span class="text-muted">APICS / SCOR Alignment</span></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <span class="footer-col-title mono">CONTACTO DIRECTO</span>
+          <div class="footer-contact-info">
+            <p><strong>Atención a Clientes &amp; Ventas:</strong></p>
+            <a href="mailto:contacto@plusg.mx" class="footer-mail">contacto@plusg.mx</a>
+            <p class="text-muted">Atención inmediata a operaciones en todo México.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy mono">
+          © <span id="year">2026</span> PlusG Enterprise WMS-ERP. Todos los derechos reservados.
+        </p>
+        <div class="footer-legal mono">
+          <span>TÉRMINOS DE SERVICIO</span>
+          <span>AVISO DE PRIVACIDAD</span>
+          <span>SEGURIDAD DE LA INFORMACIÓN</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= MODAL DEMO ACCESIBLE (HTML5 DIALOG) ================= -->
+  <dialog class="modal-dialog" id="demo-dialog" aria-labelledby="modal-title">
+    <div class="modal-box">
+      <button class="modal-close-btn" type="button" data-close-demo aria-label="Cerrar ventana modal">&times;</button>
+
+      <div id="form-view">
+        <div class="modal-head">
+          <span class="badge-tag mono"><span class="pulse-dot"></span> SESIÓN PRIVADA DE 15 MINUTOS</span>
+          <h2 id="modal-title">Agenda un recorrido por tu operación</h2>
+          <p class="modal-lead">
+            Sin rodeos comerciales: analizaremos tu flujo actual de andén, tus mermas y cómo resolverlas con PlusG.
+          </p>
+        </div>
+
+        <form id="demo-form" novalidate>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="form-nombre">Nombre y Apellido *</label>
+              <input id="form-nombre" name="nombre" type="text" autocomplete="name" required placeholder="Ej. Roberto Garza">
+            </div>
+
+            <div class="form-group">
+              <label for="form-empresa">Empresa / Razón Social *</label>
+              <input id="form-empresa" name="empresa" type="text" autocomplete="organization" required placeholder="Ej. Distribuidora del Norte">
+            </div>
+
+            <div class="form-group">
+              <label for="form-correo">Correo Corporativo *</label>
+              <input id="form-correo" name="correo" type="email" autocomplete="email" required placeholder="roberto@empresa.com">
+            </div>
+
+            <div class="form-group">
+              <label for="form-telefono">Teléfono / WhatsApp *</label>
+              <input id="form-telefono" name="telefono" type="tel" autocomplete="tel" required placeholder="+52 (81) 1234-5678">
+            </div>
+
+            <div class="form-group">
+              <label for="form-rol">Tu Rol en la Organización</label>
+              <select id="form-rol" name="rol">
+                <option value="Dirección General / Socio">Dirección General / Socio</option>
+                <option value="Director de Operaciones / Logística">Director de Operaciones / Logística</option>
+                <option value="CFO / Finanzas / Contralor">CFO / Finanzas / Contralor</option>
+                <option value="Gerente de CEDIS / Almacén">Gerente de CEDIS / Almacén</option>
+                <option value="Compras / Abastecimiento">Compras / Abastecimiento</option>
+                <option value="TI / Sistemas">TI / Sistemas</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="form-volumen">Tarimas o Bultos Mensuales Aprox.</label>
+              <select id="form-volumen" name="volumen">
+                <option value="Menos de 1,000 tarimas">Menos de 1,000 tarimas/mes</option>
+                <option value="1,000 a 5,000 tarimas">1,000 a 5,000 tarimas/mes</option>
+                <option value="5,000 a 20,000 tarimas">5,000 a 20,000 tarimas/mes</option>
+                <option value="Más de 20,000 tarimas">Más de 20,000 tarimas/mes (Gran Escala)</option>
+              </select>
+            </div>
+
+            <div class="form-group form-group-full">
+              <label for="form-reto">¿Cuál es el principal dolor que quieres resolver hoy?</label>
+              <textarea id="form-reto" name="reto" rows="2" placeholder="Ej. Descuadres en inventario físico, retrasos en andén o pérdida de control en devoluciones..."></textarea>
+            </div>
+          </div>
+
+          <div class="form-footer">
+            <button class="btn btn-accent btn-lg btn-block" type="submit">
+              Confirmar y Agendar Demostración
+            </button>
+            <p class="form-security-note mono">
+              🔒 Tus datos son confidenciales. Nunca compartimos tu información con terceros.
+            </p>
+          </div>
+        </form>
+      </div>
+
+      <!-- Success Screen -->
+      <div class="modal-success" id="form-success" hidden>
+        <div class="success-icon-badge" aria-hidden="true">✓</div>
+        <h3>¡Solicitud recibida con éxito!</h3>
+        <p id="success-text">
+          Hemos registrado tus datos. Un especialista en ingeniería logística de PlusG se pondrá en contacto contigo en menos de 24 horas hábiles para coordinar tu demostración.
+        </p>
+        <div class="success-actions">
+          <button class="btn btn-line" type="button" data-close-demo>Cerrar ventana</button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
