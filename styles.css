@@ -2404,4 +2404,120 @@ ul, ol {
 
   .calc-wrapper { padding: 30px 20px; }
   .modal-box { padding: 26px 20px; }
+  .whatsapp-float {
+    bottom: 16px;
+    right: 16px;
+  }
+  .whatsapp-btn {
+    padding: 6px;
+    border-radius: 50%;
+  }
+  .wa-text {
+    display: none;
+  }
 }
+
+/* ---------- FLOATING WHATSAPP BUTTON ---------- */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 95;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.whatsapp-float:hover {
+  transform: translateY(-3px) scale(1.02);
+}
+
+.whatsapp-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(10, 16, 26, 0.92);
+  border: 1px solid rgba(37, 211, 102, 0.38);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7), 0 0 25px rgba(37, 211, 102, 0.22);
+  border-radius: var(--radius-pill);
+  padding: 8px 18px 8px 10px;
+  position: relative;
+  overflow: visible;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.wa-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 0 16px rgba(37, 211, 102, 0.45);
+}
+
+.wa-text {
+  display: flex;
+  flex-direction: column;
+}
+.wa-title {
+  font-size: 0.88rem;
+  color: #ffffff;
+  line-height: 1.2;
+}
+.wa-sub {
+  font-size: 0.72rem;
+  color: #25d366;
+  font-family: var(--mono);
+}
+
+.wa-pulse {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #25d366;
+  opacity: 0.75;
+  animation: ping 2.2s cubic-bezier(0, 0, 0.2, 1) infinite;
+  pointer-events: none;
+}
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+.footer-phone-box {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+.footer-phone-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #25d366;
+  transition: color 0.16s ease;
+}
+.footer-phone-link:hover {
+  color: #5cf596;
+}
+.wa-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #25d366;
+  box-shadow: 0 0 8px #25d366;
+}
+.footer-schedule {
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+

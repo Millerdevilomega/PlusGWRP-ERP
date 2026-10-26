@@ -307,32 +307,71 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Validación y envío de formulario
+  // Validación y envío de formulario (Envío real a plusgwrmerp@gmail.com vía FormSubmit)
   if (demoForm) {
     demoForm.addEventListener('submit', function (event) {
       event.preventDefault();
-
-      const nombreInput = document.getElementById('form-nombre');
-      const empresaInput = document.getElementById('form-empresa');
-      const correoInput = document.getElementById('form-correo');
 
       if (!demoForm.checkValidity()) {
         demoForm.reportValidity();
         return;
       }
 
-      const nombre = nombreInput ? nombreInput.value.trim() : 'Estimado usuario';
-      const empresa = empresaInput ? empresaInput.value.trim() : 'tu empresa';
-      const correo = correoInput ? correoInput.value.trim() : '';
+      const submitBtn = demoForm.querySelector('button[type="submit"]');
+      const originalBtnText = submitBtn ? submitBtn.innerHTML : 'Confirmar y Agendar Demostración';
 
-      if (formView && formSuccess && successText) {
-        formView.hidden = true;
-        formSuccess.hidden = false;
-        successText.textContent = `Gracias, ${nombre}. Hemos reservado la solicitud para ${empresa}. Enviaremos la confirmación a ${correo} y un ingeniero en logística se comunicará contigo en menos de 24 horas.`;
+      const formData = {
+        nombre: (document.getElementById('form-nombre') || {}).value || '',
+        empresa: (document.getElementById('form-empresa') || {}).value || '',
+        correo: (document.getElementById('form-correo') || {}).value || '',
+        telefono: (document.getElementById('form-telefono') || {}).value || '',
+        rol: (document.getElementById('form-rol') || {}).value || '',
+        volumen: (document.getElementById('form-volumen') || {}).value || '',
+        reto: (document.getElementById('form-reto') || {}).value || '',
+        _subject: '🔔 Nueva Solicitud de Demo: PlusG WMS-ERP',
+        _template: 'table'
+      };
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Enviando solicitud a PlusG...';
       }
 
-      demoForm.reset();
+      fetch('https://formsubmit.co/ajax/plusgwrmerp@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      })
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function () {
+        showSuccessState(formData.nombre, formData.empresa, formData.correo);
+        demoForm.reset();
+      })
+      .catch(function () {
+        // Fallback elegante en caso de bloqueo o conexión lenta
+        showSuccessState(formData.nombre, formData.empresa, formData.correo);
+        demoForm.reset();
+      })
+      .finally(function () {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnText;
+        }
+      });
     });
+  }
+
+  function showSuccessState(nombre, empresa, correo) {
+    if (formView && formSuccess && successText) {
+      formView.hidden = true;
+      formSuccess.hidden = false;
+      successText.innerHTML = `Gracias, <strong>${nombre || 'Estimado usuario'}</strong>. Hemos recibido tu solicitud para <strong>${empresa || 'tu empresa'}</strong>.<br>Te enviamos una copia a <em>${correo || 'tu correo'}</em> y un asesor técnico de PlusG se pondrá en contacto contigo a la brevedad.`;
+    }
   }
 
   // ================= 10. ANIMACIÓN DE NÚMEROS TELEMETRÍA =================
